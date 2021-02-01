@@ -133,3 +133,59 @@ h1{
     height: 301px;
     /* width: 292px; */
 }
+
+
+/* TAKS 1 GRID 2 */
+
+.grid-1-2{
+    display: grid;
+    grid-template-columns: [begin] 1fr [end];
+    gap: 1.5rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px){
+    .grid-1-2{
+        grid-template-columns: [begin] 1fr [second] 1fr [end];
+        grid-template-rows: auto auto;
+    }
+}
+@media (min-width: 992px){
+    .grid-1-2{
+        grid-template-columns: [begin] 1fr [second] 2fr [third] 1fr [end];
+        grid-template-rows: auto auto;
+    }
+}
+
+@media (min-width: 1200px){
+    .grid-1-2{
+        grid-template-columns: [begin] 1fr [second] 2fr [third] 1fr [end];
+        grid-template-rows: auto auto;
+        margin-top: 108px;
+        width: 100%;
+    }
+}
+
+
+
+
+.box-1-2{
+    height: 250px;
+}
+.box-1-2.bottom{
+    height: 250px;
+}
+
+@media (min-width: 768px){
+    .box-1-2.bottom{
+        height: 250px;
+
+    } 
+}
+@media (min-width: 992px){
+    .box-1-2.bottom{
+        height: 150px;
+        grid-column-start: begin;
+        grid-column-end: end;
+    } 
+}
