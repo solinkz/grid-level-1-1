@@ -5,7 +5,76 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+:root{
+    --text-color: #06212D;
+    --box-color: #29ABE2;
+    --width-lg: 1200px;
+    --width-md: 992px;
+    --width-sm: 768px;
+    --width: 100%;
+}
 body{
     font-family: 'Poppins', sans-serif;
+}
+
+/* TYPOGRAPHY */
+
+h1{
+    font-size: 4rem;
+    font-weight: 300;
+    color: var(--text-color);
+    padding-bottom: 2rem;
+    border-bottom: 1px dashed rgba(0,0,0,.15);
+    margin-top: 3rem;
+}
+
+
+/* LAYOUTS */
+
+.container{
+    max-width: var(--width);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@media (min-width: 768px){
+   .container{
+       max-width: var(--width-sm);
+   }
+}
+@media (min-width: 992px){
+   .container{
+       max-width: var(--width-md);
+   }
+}
+@media (min-width: 1200px){
+   .container{
+       max-width: var(--width-lg);
+   }
+}
+
+
+/* LAYOUT LINKS */
+
+.tasks{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 3.5rem;
+}
+
+.tasks .task{
+    list-style-type: none;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1rem;
+}
+.tasks .task li{
+
+}
+.tasks .task a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+.tasks .task a:hover{
+    text-decoration: underline;
 }
